@@ -22,7 +22,7 @@ public class SpikeScript : MonoBehaviour
         {
             state = SpikeState.LETHAL;
         }
-        else if ( state == SpikeState.LETHAL && Time.time > spikeActivationTime + 0.6f)
+        else if ( state == SpikeState.LETHAL && Time.time > spikeActivationTime + 0.55f)
         {
             state = SpikeState.INACTIVE;
         }

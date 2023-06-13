@@ -29,14 +29,13 @@ public class GameOver : MonoBehaviour
         {
             if (spikeScript.state == SpikeScript.SpikeState.LETHAL)
             {
-                
                 sanityLevel.sanityPercent *= 0f;
             }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Spike")
+        if(collision.gameObject.tag == "Spike" && spikeScript.state == SpikeScript.SpikeState.LETHAL)
         {
             spikeScript = null;
         }
